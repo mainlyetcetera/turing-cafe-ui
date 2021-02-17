@@ -4,7 +4,7 @@ import './Reservation.css'
 const Reservation = ({reservation}) => {
   const {id, name, date, time, number} = reservation
   return ( 
-    <div
+    <article
       className='reservation'
       key={id}
     >
@@ -12,7 +12,7 @@ const Reservation = ({reservation}) => {
       Date: {date}
       Time: {time}
       Number: {number}
-    </div>
+    </article>
   )
 }
 
