@@ -52,7 +52,8 @@ export default class Form extends Component {
         />
 
         <button
-          onClick={() => {
+          onClick={event => {
+            event.preventDefault()
             const toAdd = {
               name: this.state.name,
               date: this.state.date,
