@@ -1,7 +1,17 @@
 import React from 'react'
 
-const Reservation = ({name, date, time, number, id}) => {
-  return <h1>Reservation here</h1>
+const Reservation = ({reservation}) => {
+  const {id, name, date, time, number} = reservation
+  return ( 
+    <div
+      key={id}
+    >
+      name={name}
+      date={date}
+      time={time}
+      number={number}
+    </div>
+  )
 }
 
 export default Reservation
