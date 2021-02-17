@@ -1,15 +1,17 @@
 import React from 'react'
+import './Reservation.css'
 
 const Reservation = ({reservation}) => {
   const {id, name, date, time, number} = reservation
   return ( 
     <div
+      className='reservation'
       key={id}
     >
-      name={name}
-      date={date}
-      time={time}
-      number={number}
+      Name: {name}
+      Date: {date}
+      Time: {time}
+      Number: {number}
     </div>
   )
 }
