@@ -14,6 +14,9 @@ describe('the initial view', () => {
   })
 
   it('should have a title', () => {
+    cy
+      .get('h1')
+      .contains('Turing Cafe Reservations')
   })
 
   it('should have a form', () => {
