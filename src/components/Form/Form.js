@@ -51,7 +51,16 @@ export default class Form extends Component {
         />
 
         <button
-          onClick={() => console.log('test')}
+          onClick={() => {
+            const toAdd = {
+              name: this.state.name,
+              date: this.state.date,
+              time: this.state.time,
+              number: this.state.number
+            }
+
+            this.props.addReservation(toAdd)
+          }}
         />
       </div>
     )
