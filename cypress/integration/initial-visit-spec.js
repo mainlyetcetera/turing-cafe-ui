@@ -77,4 +77,33 @@ describe('the form', () => {
       .type('asdf')
       .should('have.value', 'asdf')
   })
+
+  it('should be able to add a reservation', () => {
+    cy
+      .get('form div')
+      .children('input:first')
+      .should('have.value', 'asdf')
+
+      .get('form div')
+      .children('input:nth-child(2)')
+      .type('05/30')
+      .should('have.value', '05/30')
+    
+      .get('form div')
+      .children('input:nth-child(3)')
+      .type('7:30')
+      .should('have.value', '7:30')
+
+      .get('form div')
+      .children('input:nth-child(4)')
+      .type('2')
+      .should('have.value', '2')
+
+      .get('button')
+      .click()
+
+      .get('section')
+      .children()
+      .should('have.length', 3)
+  })
 })
