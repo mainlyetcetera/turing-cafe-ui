@@ -49,6 +49,10 @@ export default class Form extends Component {
           value={this.state.number}
           onChange={event => this.handleChange(event)}
         />
+
+        <button
+          onClick={() => console.log('test')}
+        />
       </div>
     )
   }
