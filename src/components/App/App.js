@@ -6,7 +6,15 @@ import './App.css';
 class App extends Component {
   constructor() {
     super()
-    this.state = {reservations: []}
+    this.state = {
+      reservations: []
+    }
+  }
+
+  addReservation = toAdd => {
+    this.setState({
+      reservations: [...this.state.reservations, toAdd]
+    })
   }
 
   componentDidMount() {
@@ -19,12 +27,13 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.reservations)
     return (
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
         <div className='resy-form'>
-          <Form />
+          <Form 
+            addReservation={this.addReservation}
+          />
         </div>
         <div className='resy-container'>
           <Reservations reservations={this.state.reservations}/>
